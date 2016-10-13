@@ -1,7 +1,7 @@
 <?php
 return array(
 	'URL_MODEL'				=>	'2',
-	'DB_TYPE'				=>	'mysql',
+	'DB_TYPE'				=>	'mysqli',
 	// 'DB_HOST'				=>	'dingqibeifen.com',
 	// 'DB_NAME'				=>	'a1120162925',
 	// 'DB_USER'				=>	'a1120162925',
