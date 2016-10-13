@@ -6,7 +6,7 @@ return array(
 	// 'DB_NAME'				=>	'a1120162925',
 	// 'DB_USER'				=>	'a1120162925',
 	// 'DB_PWD'				=>	'49643516',
-	'DB_HOST'				=>	'182.92.84.129',
+	'DB_HOST'				=>	'aliyun',
 	'DB_NAME'				=>	'blog',
 	'DB_USER'				=>	'root',
 	'DB_PWD'				=>	'root287183610',
