@@ -1,0 +1,30 @@
+<div class='main-left-evaluate'>
+	<div class='location'>
+		<a href="__GROUP__/">评论信息</a>
+	</div>
+	<foreach name="evaluate" item="list">
+		<div class="title">
+		<span class="evaluate_index">{$key+1}楼</span>
+		<p ><img class="evaluate-top-pic" src="{$list.uid|getPic|default='__ROOT__/Public/Images/001.gif'}" alt=""></p>
+		<div>
+			<span class='evaluate-name'>用户名：{$list.uid|getUsername}</span>
+			<span class='evaluate-message'>{$list.content}</span>
+			<span class="evaluate-time">回复时间:{$list.add_time}</span>
+			<span class="support">
+				<b class="bSub" id="support{$list.id}">支持({$list.support})</b>
+				<b>反对({$list.against})</b>
+				<b>回复({$list.reply})</b></span>
+		</div>
+	</div>
+	</foreach>
+</div>
+<div class='main-left-message'>
+	<div class='location'>
+		<a href="__GROUP__/">评论</a>
+	</div>
+	<div class="title">
+		<textarea name="message" id="evaluate-message"></textarea>
+		<input type="hidden" name='uid' id="uid" value="{$_SESSION['uid']}">
+		<input type="submit" class="submit" value="提交" onclick='subMsg()'>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>回收站</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/public.css" />
+</head>
+<body>
+	
+	<table class="table">
+		<tr>
+			<th colspan="6">
+				<a href="{:U(GROUP_NAME .'/Blog/clearTrach')}">清空回收站</a>
+			</th>
+		</tr>
+		<tr>
+			<th>ID</th>
+			<th>标题</th>
+			<th>分类</th>
+			<th>属性</th>
+			<th>添加时间</th>
+			<th>操作</th>
+		</tr>
+		<foreach name="list" item="v">
+		<tr>
+			<td>{$v.id}</td>
+			<td>{$v.title}</td>
+			<td>
+				{$v.cate}
+			</td>
+			<td>
+				<foreach name="v.attr" item="c">
+					[<span style="color:{$c.color}">{$c.name}</span>]
+				</foreach>
+			</td>
+			<td>{$v.add_time|date='Y-m-d H:i',###}</td>
+			<td>[<a href="{:U(GROUP_NAME.'/Blog/toTrach',array('id'=>$v['id']))}">还原</a>]
+				[<a href="{:U(GROUP_NAME.'/Blog/del_blog',array('id'=>$v['id']))}">彻底删除</a>]
+			</td>
+		</tr>
+		</foreach>
+	</table>
+</body>
+</html>

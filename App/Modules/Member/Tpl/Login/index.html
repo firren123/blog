@@ -1,0 +1,40 @@
+<include file="Public:header" />
+<include file="Public:nav" />
+<link rel="stylesheet" href="__PUBLIC__/Css/login.css">
+
+<script type="text/javascript">
+			var imageURL = "{:U('Admin/Login/verify','','')}";
+		</script>
+		<script type="text/javascript" src="__PUBLIC__/Js/login.js"></script>
+<!--主体-->
+<div class='main'>
+	<div id="login">
+		<h1>用户登陆</h1>
+		<form action="{:U('loginDo')}" method="post">
+			<table >
+				<tr>
+					<td class="title01">用户名：</td>
+					<td><input type="text" name="username" ></td>
+				</tr>
+				<tr>
+					<td class="title01">密码：</td>
+					<td><input type="password" name="password" ></td>
+				</tr>
+				<tr>
+					<td class="title01">验证码：</td>
+					<td><input type="text" size="6" name="verify" >
+					<img src="{:U('Member/Login/verify','','')}" id="code"/>
+					<a href="javascript:void(change_code(this));">看不清</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input class="bt2" type="submit" name="sub" ></td>
+				</tr>
+				
+			</table>
+			
+		</form>
+	</div>
+</div>
+<!--底部-->
+<include file="Public:footer" />
