@@ -2,10 +2,6 @@
 return array(
 	'URL_MODEL'				=>	'2',
 	'DB_TYPE'				=>	'mysqli',
-	// 'DB_HOST'				=>	'dingqibeifen.com',
-	// 'DB_NAME'				=>	'a1120162925',
-	// 'DB_USER'				=>	'a1120162925',
-	// 'DB_PWD'				=>	'49643516',
 	'DB_HOST'				=>	'aliyun',
 	'DB_NAME'				=>	'blog',
 	'DB_USER'				=>	'root',
