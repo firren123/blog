@@ -33,7 +33,6 @@ class TestAction extends Action
 		$a = 1;
 		if ($a) {
 			echo 1;
-			break;
 		}else{
 			echo 2;
 		}
