@@ -45,7 +45,7 @@
 			<li class='nav-lv1-li'>
 				<a href="{:U('/c_'.$v['id'])}" class='top-cate'>{$v.name}</a>
 				
-				<ul>
+				<ul class="child">
 					<foreach name="v.child" item="vo">
 					<li><a href="{:U('/c_'.$vo['id'])}">{$vo.name}</a></li>
 					</foreach>
@@ -54,3 +54,14 @@
 			</nav>
 		</ul>
 	</div>
+<script>
+	jQuery(".nav-lv1").slide({
+		type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+		titCell:".nav-lv1-li", //鼠标触发对象
+		targetCell:".child", //titCell里面包含的要显示/消失的对象
+		effect:"slideDown", //targetCell下拉效果
+		delayTime:300 , //效果时间
+		triggerTime:0, //鼠标延迟触发时间（默认150）
+		returnDefault:false //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+	});
+</script>
