@@ -19,7 +19,7 @@ class DetailAction extends Action{
 		// 评论信息
 		import('ORG.Util.Page');
 		// 计算共有多少人评论，不算回复
-		$where = array('target_uid'=>$id,'target_id'=>0);
+		$where = array('target_id'=>$id);
 		$count = D('evaluate')->where($where)->count();
 		$p = new Page($count,5);
 		$limit = "$p->firstRow,$p->listRows";

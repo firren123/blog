@@ -6,7 +6,8 @@ class BlogAction extends CommonAction
 {
 	//内容列表
 	function index()
-	{	
+	{
+        echo 33333;exit;
 		import('ORG.Util.Page');
 		$count = D('content')->count();
 		$p = new Page($count ,10);

@@ -9,7 +9,6 @@ class CommonAction extends Action
 	protected $token;
 	function _initialize()
 	{
-
 		header('charset=utf-8');
 		$this->param = I('','');
 		file_put_contents("/tmp/login.log", "======quan ==\r\n",FILE_APPEND);
@@ -30,7 +29,7 @@ class CommonAction extends Action
 		file_put_contents("/tmp/login.log", "====_makeSign======".($this->_makeSign())."==========\r\n",FILE_APPEND);
 		$debug = I('debug');
 		if($debug !=1){
-			$this->_validateSign();
+//			$this->_validateSign();
 		}
 
 	}

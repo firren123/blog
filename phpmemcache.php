@@ -19,14 +19,14 @@
 
 $VERSION='$Id: memcache.php,v 1.1.2.3 2008/08/28 18:07:54 mikl Exp $';
 
-define('ADMIN_USERNAME','memcache'); 	// Admin Username
-define('ADMIN_PASSWORD','password');  	// Admin Password
+define('ADMIN_USERNAME','admin'); 	// Admin Username
+define('ADMIN_PASSWORD','123456');  	// Admin Password
 define('DATE_FORMAT','Y/m/d H:i:s');
 define('GRAPH_SIZE',200);
 define('MAX_ITEM_DUMP',50);
 
 //$MEMCACHE_SERVERS[] = '169.254.221.91:32768'; // add more as an array
-$MEMCACHE_SERVERS[] = '192.168.33.1:32768'; // add more as an array
+$MEMCACHE_SERVERS[] = '192.168.33.1:9200'; // add more as an array
 
 
 ////////// END OF DEFAULT CONFIG AREA /////////////////////////////////////////////////////////////

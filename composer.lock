@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "aee500a257e53733a5d1e2c105946199",
+    "packages": [
+        {
+            "name": "tencentyun-api/qcloudapi-sdk-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/QcloudApi/qcloudapi-sdk-php.git",
+                "reference": "7cda0248ffc17b7ce4039027ebe65cfae3aac653"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/QcloudApi/qcloudapi-sdk-php/zipball/7cda0248ffc17b7ce4039027ebe65cfae3aac653",
+                "reference": "7cda0248ffc17b7ce4039027ebe65cfae3aac653",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/QcloudApi/QcloudApi.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "php sdk for qcloudapi",
+            "homepage": "http://www.qcloud.com/",
+            "keywords": [
+                "qcloud",
+                "sdk",
+                "tencentyun"
+            ],
+            "time": "2017-11-16 14:17:52"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "RC",
+    "stability-flags": {
+        "tencentyun-api/qcloudapi-sdk-php": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
