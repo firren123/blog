@@ -1,0 +1,20 @@
+User-agent: * 
+Disallow: /Admin
+我是测试1
+===========
+我是测试2
+===========
+我是测试3
+============
+我是测试4
+===========
+wo shi 5
+===========
+iiiiiiii6
+===========
+rrrrrrrrr7
+===========
+jjjjjjjj8
+===========
+adfafefefe
+afdsf
