@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>会员</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/public.css" />
+
+</head>
+<body>
+	<table class="table">
+		<thead>
+			<td>ID</td>
+			<td>会员名称</td>
+			<td>性别</td>
+			<td>等级</td>
+			<td>邮箱</td>
+			<td>qq</td>
+			<td>最后登录IP</td>
+			<td>注册时间</td>
+			<td>最后登录时间</td>
+			<td>状态</td>
+			<td>状态</td>
+			<td>操作</td>
+		</thead>
+		<tbody>
+			<if condition="$list neq ''">
+				<foreach name="list"  item="list">
+					<tr>
+						<td>{$key+1}</td>
+						<td>{$list.member_name}</td>
+						<td>{$list.sex}</td>
+						<td>{$list.level_id|level=###}</td>
+						<td>{$list.member_email}</td>
+						<td>{$list.member_qq}</td>
+						<td>{$list.last_ip}</td>
+						
+						<td>{$list.reg_time}</td>
+						<td>{$list.last_time}</td>
+						<td>{$list.member_state}</td>
+						<td>
+							<a href="{:U(GROUP_NAME .'/Member/state1',array('member_id'=>$list['member_id']))}">启用</a>
+							/
+							<a href="{:U(GROUP_NAME .'/Member/state0',array('member_id'=>$list['member_id']))}">禁止</a>
+						</td>
+
+						<td>
+							<a href="{:U(GROUP_NAME .'/Member/update',array('member_id'=>$list['member_id']))}">修改</a>
+							/
+							<a onclick="return confirm('确定要删除吗')" href="{:U(GROUP_NAME .'/Member/del',array('member_id'=>$list['member_id']))}">删除</a>
+						</td>
+					</tr>
+				</foreach>
+				<td colspan="12">{$page}	</td>
+		<else/>
+		<tr>
+			<td colspan="12">暂时没有数据	</td>
+		</tr>
+		
+	</if>
+			</tbody>
+
+		</table>
+		
+
+</body>
+</html>

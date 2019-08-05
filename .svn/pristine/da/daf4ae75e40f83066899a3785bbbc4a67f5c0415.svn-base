@@ -1,0 +1,11 @@
+<dl>
+	<dt>{$title}</dt>
+	{$order}
+	<foreach name="cate" item="vo">
+		<dd>
+			<a href="{$vo.id}">{$vo.title}</a>
+			<span>({$vo.click})</span>
+		</dd>
+	</foreach>
+
+</dl>

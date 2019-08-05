@@ -1,0 +1,50 @@
+	<div class='bottom'>
+		<div>
+			网站版权归80年代博客所有
+		</div>
+	</div>
+
+
+
+<!-- 网站小人物 -->
+<link rel="stylesheet" href="__PUBLIC__/spig/spigPet.css" />
+<script type="text/JavaScript" src='__PUBLIC__/spig/spig.js'></script>
+<div id="spig" class="spig">
+    <div id="message">正在加载中……</div>
+    <div id="mumu" class="mumu"></div>
+</div>
+<script type="text/javascript">
+  var num = Math.floor(Math.random() * ( 3456 + 1));
+var isindex = true;
+var visitor = "亲"+num;
+window._deel = {
+    name: '多米斯特里',
+    url: 'http://www.80wow.com',
+    rss: 'http://www.80wow.com',
+    maillist: '',
+    maillistCode: '',
+    commenton: 1,
+    roll: [0,0]
+}
+</script>
+<!-- 网站小人物结束 -->
+
+	<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://tongji.80wow.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+
+</script>
+<noscript><p><img src="http://tongji.80wow.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+</body>
+</html>  

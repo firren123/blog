@@ -1,0 +1,34 @@
+<include file="Public:header" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/list.css" />
+<include file="Public:nav" />
+<!--主体-->
+	<div class='main'>
+		<div class='main-left'>
+			<div class="top_cate">
+				<a href="{:U('/')}">首页</a>
+				<foreach name="cate_list" item="vo">
+					><a href="{:U('/'.$vo['id'])}">{$vo.name}</a>
+				</foreach>
+			</div>
+			<foreach name="list" item="vo">
+				<dl>
+					<dt>{$vo.name}</dt>
+					<dd class='channel'><a href="{:U('/'.$vo['id'])}">{$vo.title}</a></dd>
+					<dd class='info'>
+						<span class='time'>发布于：{$vo.add_time|date='Y年m月d日 H:i:s',###}</span>
+						<span class='click'>点击：{$vo.click}</span>
+					</dd>
+					<dd class='content'><a href="{:U('/'.$vo['id'])}">{$vo.summary}</a></dd>
+					<dd class='read'>
+						<a href="{:U('/'.$vo['id'])}">阅读全文>></a>
+					</dd>
+				</dl>
+			</foreach>
+			<p>{$page}</p>
+			
+		</div>
+	<!--主体右侧-->
+<include file="Public:right" />
+</div>
+<!--底部-->
+<include file="Public:footer" />

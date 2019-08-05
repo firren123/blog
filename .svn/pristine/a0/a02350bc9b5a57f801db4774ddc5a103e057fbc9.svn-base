@@ -1,0 +1,86 @@
+<form name="form">
+<TABLE>
+<TR>
+    <TD>现在的日期：</TD>
+    <TD><input type="text" name="u" value="2009-01-01"></TD>
+</TR>
+<TR>
+    <TD>要加的天数：</TD>
+    <TD><INPUT TYPE="text" name="entry" id="d" VALUE="" onkeyup="calculate('d')"></TD>
+</TR>
+<TR>
+    <TD>要加的周数：</TD>
+    <TD><INPUT TYPE="text" name="entry" id="w" VALUE="" onkeyup="calculate('w')"></TD>
+</TR>
+<TR>
+    <TD>要加的月数：</TD>
+    <TD><INPUT TYPE="text" name="entry" id="m" VALUE="" onkeyup="calculate('m')"></TD>
+</TR>
+<TR>
+    <TD>要加的年数：</TD>
+    <TD><INPUT TYPE="text" name="entry" id="y" VALUE="" onkeyup="calculate('y')"></TD>
+</TR>
+<TR>
+    <TD>结果：</TD>
+    <TD><input name="twice"></TD>
+</TR>
+<!--<TR>
+    <TD>要加的日期2：</TD>
+    <TD><input type="text" name="u" value="2009/01/01"></TD>
+</TR>
+<TR>
+    <TD>结果2：</TD>
+    <TD><input name="twice"></TD>
+</TR>-->
+</TABLE>
+</form>
+<script language="JavaScript">
+function   DateAdd(strInterval,   NumDay,   dtDate)   {   
+var   dtTmp   =   new   Date(dtDate);   
+if   (isNaN(dtTmp))   dtTmp   =   new   Date();   
+switch   (strInterval)   {   
+   case   "s":
+     dtTmp =   new   Date(Date.parse(dtTmp)   +   (1000   *   parseInt(NumDay))); 
+     break; 
+   case   "n":
+     dtTmp =   new   Date(Date.parse(dtTmp)   +   (60000   *   parseInt(NumDay))); 
+     break; 
+   case   "h":
+     dtTmp =   new   Date(Date.parse(dtTmp)   +   (3600000   *   parseInt(NumDay)));
+     break;
+   case   "d":
+     dtTmp =   new   Date(Date.parse(dtTmp)   +   (86400000   *   parseInt(NumDay)));
+     break;
+   case   "w":
+     dtTmp =   new   Date(Date.parse(dtTmp)   +   ((86400000   *   7)   *   parseInt(NumDay))); 
+     break;
+   case   "m":
+     dtTmp =   new   Date(dtTmp.getFullYear(),   (dtTmp.getMonth())+parseInt(NumDay),   dtTmp.getDate(),   dtTmp.getHours(),   dtTmp.getMinutes(),   dtTmp.getSeconds());
+     break;   
+   case   "y":
+     //alert(dtTmp.getFullYear());
+     dtTmp =   new   Date(dtTmp.getFullYear()+parseInt(NumDay),   dtTmp.getMonth(),   dtTmp.getDate(),   dtTmp.getHours(),   dtTmp.getMinutes(),   dtTmp.getSeconds());
+     //alert(dtTmp);
+     break;
+}
+var mStr=new String(dtTmp.getMonth()+1);
+var dStr=new String(dtTmp.getDate());
+if (mStr.length==1){
+   mStr="0"+mStr;
+}
+if (dStr.length==1){
+   dStr="0"+dStr;
+}
+return dtTmp.getFullYear()+"-"+mStr+"-"+dStr;
+}   
+</script>
+<script language="JavaScript">
+function calculate(type)
+{
+    var entry = document.getElementById(type).value;//自己判断是否合法
+var uValue=document.form.u.value;
+uValue=uValue.replace("-","/").replace("-","/");
+//alert(uValue);
+    document.form.twice.value = DateAdd(type,entry,uValue);
+}
+</script>

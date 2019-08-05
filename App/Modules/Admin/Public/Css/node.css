@@ -1,0 +1,59 @@
+#warp{
+	width: 94%;
+	height: auto;
+	margin: 20px auto;
+	overflow: hidden;
+	padding:18px 12px;
+	border:1px solid #ccc;
+}
+#warp .add-app{
+	display: block;
+	width:100px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	background-color: #670768;
+	border-radius: 4px;
+	color: #fff;
+}
+#warp .app{
+	margin: 10px 0px;
+	border: 1px solid #cdcdcd;
+	border-radius:4px;
+}
+#warp .app p{
+	display: block;
+	height: 30px;
+	padding: 0px 10px;
+	line-height: 30px;
+	
+}
+#warp .app p strong{
+	font-size: 20px;
+	color: #0b99d8;
+}
+#warp .app dl{
+	margin: 10px 0;
+	height: auto;
+	overflow: hidden;
+}
+#warp .app dl dt{
+	display: block;
+	font-size: 16px;
+	height: 36px;
+	line-height: 36px;
+	background-color: #e6e6fa;
+	text-indent: 10px;
+}
+#warp .app dl dt strong{
+	font-size: 16px;
+	color: #61a1fa;
+}
+#warp .app dl dd{
+	display: block;
+	height: auto;
+	float:left;
+	padding: 10px 10px;
+	margin: 0 10px;
+
+}

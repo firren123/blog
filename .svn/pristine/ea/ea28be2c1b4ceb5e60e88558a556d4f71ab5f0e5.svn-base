@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>属性列表</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/public.css" />
+</head>
+<body>
+	<table class="table">
+		<tr>
+			<th>ID</th>
+			<th>名称</th>
+			<th>颜色</th>
+			<th>操作</th>
+		</tr>
+		<foreach name="attr" item="v">
+		<tr>
+			<td align="right">{$v.id}</td>
+			<td align="right">{$v.name}</td>
+			<td align="right">
+				<div style="width:20px; height:20px; background:{$v.color};"></div>
+			</td>
+			<td>
+				[<a href="{:U(GROUP_NAME .'/Attribute/edit_attr',array('id'=>$v['id']))}">修改</a>]
+				[<a href="{:U(GROUP_NAME .'/Attribute/del_attr',array('id'=>$v['id']))}">删除</a>]
+			</td>
+		</tr>
+		</foreach>
+	</table>
+	<p class="page">{$page}</p>
+</body>
+</html>

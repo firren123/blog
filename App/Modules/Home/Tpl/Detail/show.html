@@ -1,0 +1,44 @@
+<include file="Public:header" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/show.css" />
+	<link rel="stylesheet" href="__ROOT__/Data/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+	
+	<script type="text/javascript" src="__ROOT__/Data/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	
+<include file="Public:nav" />
+<!--主体-->
+<div class='main'>
+	<div class='main-left'>
+		<div class="main-left-content">
+			<div class='location'>
+				<a href="__GROUP__/">首页</a>>
+				<php>$count = count($topCate)-1;</php>
+				<foreach name="topCate" item="v">
+					<a href="{:U('/c_'.$v['id'])}">{$v.name}</a>
+					<if condition="$key neq $count">></if>
+				</foreach>
+			</div>
+			<div class="title">
+				<p>{$blog.title}</p>
+				<div>
+					<span class='fl'>发布于：{$blog.add_time|date='Y年m月d日',###}</span>
+					<span class='fr'>已被阅读<script src="{:U(GROUP_NAME . '/Detail/clicknum',array('id'=>$blog['id']))}"></script>次</span>
+				</div>
+			</div>
+			<div class='content' style="word-break:break-all">
+
+				{$blog.content}
+			</div>
+		</div>
+		<input type="hidden" name="target_uid" id='target_uid' value="{$blog.id}">
+		{:W('Evaluate')}
+	</div>
+
+	<!--主体右侧-->
+	<include file="Public:right" />
+</div>
+<!--底部-->
+<SCRIPT TYPE="text/javascript" src="__PUBLIC__/Js/detail.js"></SCRIPT>
+<include file="Public:footer" />

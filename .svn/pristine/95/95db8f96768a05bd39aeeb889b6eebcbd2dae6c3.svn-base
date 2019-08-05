@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>{$title}节点添加</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/public.css" />
+</head>
+<body>
+	<form action="" method="post">
+		<table class="table">
+			<tr>
+				<th colspan="2"><a href="{:U(GROUP_NAME .'/Rbac/node_list')}">{$title}节点列表</a></th>
+			</tr>
+			<tr>
+				<td align="right">{$title}节点</td>
+				<td><input type="text" value="" name="name" /></td>
+			</tr>
+			<tr>
+				<td align="right">{$title}节点标题</td>
+				<td><input type="text" name="title" value="" /></td>
+			</tr>
+			<tr>
+				<td align="right">排序</td>
+				<td><input type="text" name="sort" value="100" /></td>
+			</tr>
+			<tr>
+				<td align="right">状态</td>
+				<td>
+					<input type="radio" name="status" value="0" checked/>启用
+					<input type="radio" name="status" value="1" />禁用
+				</td>
+			</tr>
+			<tr>
+				<input type="hidden" name="pid" value="{$pid}"/>
+				<input type="hidden" name="level" value="{$level}" />
+				<td align="center" colspan="2"><input type="submit" value="保存提交" class="submit" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

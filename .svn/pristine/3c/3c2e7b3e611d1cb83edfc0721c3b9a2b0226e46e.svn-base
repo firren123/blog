@@ -1,0 +1,98 @@
+<include file="Public:header" />
+<include file="Public:nav" />
+<link rel="stylesheet" href="__PUBLIC__/Css/member.css" />
+<!--主体-->
+<div class="breadcrumbnav">
+	<!-- <ul>
+		<li><a href="#">帮助中心</a></li>
+		<li><a href="#">帮助中心</a></li>
+		<li><a href="#">帮助中心</a></li>
+	</ul> -->
+	
+
+</div>
+<!--页面主题部分-->
+<div class="warpmain">
+ <div class="sidesmall fl">
+  <div class="personmain">
+   <a href="#" class="myorder">我的订单</a>
+   <a href="#">我的收藏</a>
+   <a href="#" class="current">账号管理</a>
+  </div>
+ </div>
+ <div class="sidebigmain fr">
+   <div class="persontit"><span class="fl">账号管理</span><p class="fr"><a href="#" class="current">基本信息</a>|<a href="#">账号信息</a>|<a href="#">修改密码</a></p></div>
+   <div class="sidebig">
+    <div class="accountsmain">
+     <dl class="datamain">
+      <dt>用户昵称：</dt>
+      <dd><input type="text" name="" class="datatxt"/></dd>
+     </dl>
+     <dl class="datamain">
+      <dt>用户头像：</dt>
+      <dd>
+       <div class="headportrait"></div>
+       <p class="headportraitp">头像仅支持JPG格式，且文件大小小于2m<br /><a href="#" class="headportraitbtn"></a></p>
+      </dd>
+     </dl>
+     <dl class="datamain">
+      <dt>性别：</dt>
+      <dd>
+       <p class="sexbox pr"><input type="radio" id="rad1" name="sex" /><label for="rad1">男</label></p>
+       <p class="sexbox pr"><input type="radio" id="rad2" name="sex" /><label for="rad2">女</label></p>
+       <p class="sexbox pr"><input type="radio" id="rad3" name="sex" /><label for="rad3">保密</label></p>
+      </dd>
+     </dl>
+     <dl class="datamain">
+      <dt>生日：</dt>
+      <dd class="databox">
+       <select>
+        <option value="00">1990</option>
+        <option value="01">1991</option>
+        <option value="02">1992</option>
+        <option value="03">1993</option>
+       </select>
+       <select>
+        <option value="00">01</option>
+        <option value="01">02</option>
+        <option value="02">03</option>
+        <option value="03">04</option>
+       </select>
+       <select>
+        <option value="00">01</option>
+        <option value="01">02</option>
+        <option value="02">03</option>
+        <option value="03">04</option>
+       </select>
+      </dd>
+     </dl>
+     <dl class="datamain">
+      <dt>所在地：</dt>
+      <dd class="databox">
+       <select>
+        <option value="00">1990</option>
+        <option value="01">1991</option>
+        <option value="02">1992</option>
+        <option value="03">1993</option>
+       </select>
+       <span>市</span>
+       <select>
+        <option value="00">01</option>
+        <option value="01">02</option>
+        <option value="02">03</option>
+        <option value="03">04</option>
+       </select>
+       <span>区</span>
+      </dd>
+     </dl>
+     <dl class="datamain">
+      <dt>&nbsp;</dt>
+      <dd><a href="#" class="accbtn">保存资料</a></dd>
+     </dl>
+    </div>
+   </div>
+ </div>
+</div>
+<!--页面主题部分-->
+<!--底部-->
+<include file="Public:footer" />

@@ -1,0 +1,11 @@
+<dl>
+	<dt>{$title}</dt>
+	{$order}
+	<foreach name="cate" item="vo">
+		<dd>
+			<a href="{:U('/'.$vo['id'])}">{$vo.title|mb_substr=0,20,'utf-8'}</a>
+			<span>({$vo.click})</span>
+		</dd>
+	</foreach>
+
+</dl>

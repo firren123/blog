@@ -1,0 +1,49 @@
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.common.plugins.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-ui-1.8.21.custom.min.js"></script>
+ 
+<table class="table" width="60%" layoutH="100" id="jbsxBox" >	
+	<tbody >
+           <tr>
+              <td width="30%">
+                <input  name='time[]' type='text' class='c1'  value="a" onkeyup="return ValidateNumber($(this),value)"> 
+                </td><td>
+                <input  type='text' id="c1"  value="1">
+              </td>
+            </tr>
+           <tr>
+              <td width="30%"><input name='time[]' type='text' class='c2' value="b"></td>
+              <td>
+              <input  type='text' id="c2" value="2">
+            </td>
+            </tr>
+           <tr>
+              <td width="30%"><input name='time[]' type='text' class='c3'  value="c"></td><td>
+              <input  type='text' id="c3"  value="4">
+            </td>
+            </tr>
+	</tbody>
+</table>
+
+<script type="text/javascript">
+function ValidateNumber(e, pnumber)
+{
+    if (!/^\d+$/.test(pnumber))
+    {
+        $(e).val(/^\d+/.exec($(e).val()));
+    }else{
+    	var c = $(e).attr('class');
+      var n =0;
+        for (var i = 1; i < 10; i++) {
+
+         n+= Number($("#c"+i).val());
+          var s =Number(pnumber)+n;
+          var a=i+1;
+          $('.c'+a).val(s);
+        };
+       
+
+    }
+    return false;
+}
+</script>

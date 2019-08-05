@@ -1,0 +1,64 @@
+.breadcrumbnav {
+    color: #767676;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px;
+   
+
+}/*
+.breadcrumbnav ul{
+	margin-left: 10px;
+}
+.breadcrumbnav ul li{
+	float: left;
+}*/
+.warpmain{width:1200px; overflow:hidden; margin:10px auto 0;}
+/*个人中心*/
+
+.sidesmall {
+    border: 1px solid #dfdfdf;
+    width: 198px;
+}
+.showmain{background:#fff;}
+.sidebigmain{width:985px;}
+.sidesmall{width:198px; border:1px solid #dfdfdf;}
+.sidebig{width:983px; border:1px solid #dfdfdf;}
+
+
+.personmain{width:198px;min-height:250px;_height:250px;padding-bottom:50px;}
+.personmain a{display:block;width:198px;height:50px;line-height:50px;text-align:center; font-weight:bold;}
+.personmain a.current{ background:#f8f8f8;border-top:1px solid #dfdfdf; border-bottom:1px solid #dfdfdf;}
+.personmain a.myorder{border-top:none;}
+.persontit{height:51px; line-height:51px;}
+.persontit span{font-weight:bold;}
+.persontit a{padding:0 6px;}
+.persontit a.current,.acccon span{color:#247CD6;}
+
+
+
+.orderlist,.collectlist{width:985px; border:1px solid #dfdfdf; border-bottom:none;}
+.orderlist th{height:60px;background:#f8f8f8;}
+.orderlist th,.orderlist td{width:122px; border-bottom:1px solid #dfdfdf; text-align:center;}
+.orderlist td{padding:15px 0;}
+.orderlist .ordertit{width:381px;}
+.orderlist td.ordertit{width:371px;padding:15px 0 15px 10px; text-align:left;}
+.orderlist .ordertit a,.collectpic{display:inline-block;width:80px; height:80px; border:1px solid #dfdfdf; margin-right:10px; float:left;}
+.orderlist img{width:80px;height:80px}
+.orderlist .orderstate{width:180px;}
+.collectlist{width:983px;}
+.collectboxtit{height:35px; padding:10px 0;background:#f8f8f8;border-bottom:1px solid #dfdfdf;}
+.collectmain{width:983px;}
+.collectmain th,.collectmain td{width:150px;border-bottom:1px solid #dfdfdf; text-align:center;}
+.collectmain .boxcheck{width:50px;}
+.collectmain .collectbox{width:618px; text-align:left; padding:15px 15px 15px 0;}
+.checkmain{width:150px; height:35px; line-height:35px; float:left; text-align:left; position:relative; padding-left:35px;}
+#check1{position:absolute; left:16px; top:11px;*top:8px}
+.collecbtn{width:215px; height:35px; float:right; padding-right:20px;}
+
+.collectbox a{display:block; float:left;}
+.collecttit{width:525px; line-height:22px; padding-top:8px;}
+.joinshop,.calloff{ line-height:25px; font-weight:bold;}
+.joinshop,.joinshop:hover{color:#247CD6;}
+.calloff,.calloff:hover{color:#e06b27;}
