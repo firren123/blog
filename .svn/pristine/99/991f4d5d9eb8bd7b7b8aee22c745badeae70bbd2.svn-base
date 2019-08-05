@@ -1,6 +1,0 @@
-		<div class='main-right'>
-			{:W('Cate',array('title'=>'热门博文','order'=>'click desc','limit'=>5))}
-			{:W('Cate',array('title'=>'最新发布','order'=>'add_time desc','limit'=>5))}
-			{:W('Link')}
-		</div>
-	

@@ -1,5 +1,0 @@
-[ISAPI_Rewrite]
-# 3600 = 1 hour
-CacheClockRate 3600
-RepeatLimit 32
-RewriteRule (?!\/App|\/Test|\/Data|\/hd|\/Uploads|\/weibo)(.*)$ /index\.php/$1 [I]
