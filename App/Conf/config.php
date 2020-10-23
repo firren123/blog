@@ -2,10 +2,10 @@
 return array(
 	'URL_MODEL'				=>	'2',
 	'DB_TYPE'				=>	'mysqli',
-	'DB_HOST'				=>	'aliyun',
+	'DB_HOST'				=>	'127.0.0.1',
 	'DB_NAME'				=>	'blog',
-	'DB_USER'				=>	'root',
-	'DB_PWD'				=>	'root123',
+	'DB_USER'				=>	'blog',
+	'DB_PWD'				=>	'blog123',
 
 //	'DB_HOST'				=>	'127.0.0.1',
 //	'DB_NAME'				=>	'blog',
@@ -20,7 +20,8 @@ return array(
     'APP_GROUP_MODE'        =>  1,  // 分组模式 0 普通分组 1 独立分组
     'APP_GROUP_PATH'        =>  'Modules', // 分组目录 独立分组模式下面有效
     // 'SHOW_PAGE_TRACE'		=>	1,//显示调试信息
-
+	'TMPL_CACHE_ON' => false,//禁止模板编译缓存
+	'HTML_CACHE_ON' => false,//禁止静态缓存
     //加载配置文件
     'LOAD_EXT_CONFIG'		=>'verify',
 

@@ -1,6 +1,6 @@
 <?php
 /**
-	
+
 */
 class IndexAction extends Action{
 	function index(){
@@ -21,7 +21,8 @@ class IndexAction extends Action{
 		
 		$this->list = $list;
 		$this->display('index');
-	}
+
+    }
 }
 
 

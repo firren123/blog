@@ -16,7 +16,7 @@ class IndexAction extends CommonAction{
 		$gifo = new getIp();
 		$user['ip'] = array('IP:',$gifo->real_ip());
 		$ipadds = $gifo->Getaddress();
-		$user['ipadd'] =array('IP物理地址:',implode('-', $ipadds[0]));
+		$user['ipadd'] =array('IP物理地址:',@implode('-', $ipadds));
 		$user['Browser'] =array('浏览器：',$gifo->GetBrowser());
 		$user['language'] =array('语言:', $gifo->GetLang());
 		$user['system'] = array('操作系统:', $gifo->GetOs());

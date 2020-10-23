@@ -582,6 +582,7 @@ function tag($tag, &$params=NULL) {
     }elseif(!empty($extends)) {
         $tags = $extends;
     }
+
     if($tags) {
         if(APP_DEBUG) {
             G($tag.'Start');

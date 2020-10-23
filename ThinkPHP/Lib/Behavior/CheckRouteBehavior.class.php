@@ -188,7 +188,9 @@ class CheckRouteBehavior extends Behavior {
     private function parseRegex($matches,$route,$regx) {
         // 获取路由地址规则
         $url   =  is_array($route)?$route[0]:$route;
-        $url   =  preg_replace('/:(\d+)/e','$matches[\\1]',$url);
+//        $url   =  preg_replace('/:(\d+)/e','$matches[\\1]',$url);
+        $url   =  preg_replace_callback('/:(\d+)/',function($r)use(&$matches){return $matches[$r[1]];},$url);
+
         if(0=== strpos($url,'/') || 0===strpos($url,'http')) { // 路由重定向跳转
             header("Location: $url", true,(is_array($route) && isset($route[1]))?$route[1]:301);
             exit;

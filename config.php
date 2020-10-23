@@ -2,10 +2,10 @@
 return array(
 	'URL_MODEL'				=>	'2',
 	'DB_TYPE'				=>	'mysql',
-	'DB_HOST'				=>	'dingqibeifen.com',
-	'DB_NAME'				=>	'a1120162925',
-	'DB_USER'				=>	'a1120162925',
-	'DB_PWD'				=>	'49643516',
+	'DB_HOST'				=>	'127.0.0.1',
+	'DB_NAME'				=>	'blog',
+	'DB_USER'				=>	'blog',
+	'DB_PWD'				=>	'blog123',
 	'DB_PORT'				=>	'3306',
 	'DB_PREFIX'				=>	'blog_',
 
