@@ -59,6 +59,7 @@ class CategoryAction extends CommonAction
 		}else{
 			$pid = I('pid');
 			$id = I('id');
+			var_dump($id);
 			if ($pid>0) {
 				$this->p_cate = D('cate')->find($pid);
 			}else{

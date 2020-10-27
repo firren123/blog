@@ -24,7 +24,7 @@
 				<p>{$blog.title}</p>
 				<div>
 					<span class='fl'>发布于：{$blog.add_time|date='Y年m月d日',###}</span>
-					<span class='fr'>已被阅读<script src="{:U(GROUP_NAME . '/Detail/clicknum',array('id'=>$blog['id']))}"></script>次</span>
+					<span class='fr'>已被阅读<script src="{:U(GROUP_NAME . '/Detail/clicknum')}?id={$blog['id']}"></script>次</span>
 				</div>
 			</div>
 			<div class='content' style="word-break:break-all">

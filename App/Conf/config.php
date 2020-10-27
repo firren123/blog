@@ -33,6 +33,8 @@ return array(
 		'c/:id'=>'Home/List/index',
 		'/^c_(\d+)$/'=>'Home/List/index?id=:1',
 		':id\d'=>'Home/Detail/index',
+        '/Admin/Category/cate_edit/id/:d/pid/:d$/'=>array('/Admin/Category/cate_edit','id=:1&pid=:2'),
+
 		),
 	// 'URL_ROUTER_ON'   => true, //开启路由
  //    'URL_ROUTE_RULES' => array( //定义路由规则
