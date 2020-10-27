@@ -1,1 +1,0 @@
-<?php	return array ( 'VERIFY_HEIGHT' => '2501', 'VERIFY_WIDTH' => '601', 'VERIFY_STRING' => 'ASDFGHJKLQWERTYU', 'VERIFY_COLOR' => '#FF0000', 'VERIFY_COUNT' => '511', 'VERIFY_FUNCTION' => 'string', );?>

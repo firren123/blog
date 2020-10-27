@@ -27,9 +27,12 @@
 				<td><input type="text" name="{$v.id}" value="{$v.sort}" height="26px" size="4" /></td>
 				<td>{$v.is_show|is_show=###}</td>
 				<td>
-					[<a href="{:U(GROUP_NAME .'/Category/cate_edit',array('id'=>$v['id'],'pid'=>$v['pid']))}">修改</a>]
-					[<a href="{:U(GROUP_NAME .'/Category/cate_del',array('id'=>$v['id']))}">删除</a>]
-					[<a href="{:U(GROUP_NAME .'/Category/addcate',array('pid'=>$v['id']))}">添加子分类</a>]
+					<!--[<a href="{:U(GROUP_NAME .'/Category/cate_edit',array('id'=>$v['id'],'pid'=>$v['pid']))}">修改</a>]-->
+					<!--[<a href="{:U(GROUP_NAME .'/Category/cate_del',array('id'=>$v['id']))}">删除</a>]-->
+					<!--[<a href="{:U(GROUP_NAME .'/Category/addcate',array('pid'=>$v['id']))}">添加子分类</a>]-->
+					[<a href="{:U(GROUP_NAME .'/Category/cate_edit')}?id={$v['id']}&pid={$v['pid']}">修改</a>]
+					[<a href="{:U(GROUP_NAME .'/Category/cate_del')}?id={$v['id']}&pid={$v['pid']}">删除</a>]
+					[<a href="{:U(GROUP_NAME .'/Category/addcate')}?id={$v['id']}&pid={$v['pid']}">添加子分类</a>]
 				</td>
 			</tr>
 			</foreach>

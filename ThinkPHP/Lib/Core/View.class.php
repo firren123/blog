@@ -125,10 +125,12 @@ class View {
         }else{
             // 视图解析标签
             $params = array('var'=>$this->tVar,'file'=>$templateFile,'content'=>$content,'prefix'=>$prefix);
+
             tag('view_parse',$params);
         }
         // 获取并清空缓存
         $content = ob_get_clean();
+
         // 内容过滤标签
         tag('view_filter',$content);
         // 输出模板文件
