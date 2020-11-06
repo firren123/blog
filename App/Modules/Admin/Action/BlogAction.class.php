@@ -8,10 +8,11 @@ class BlogAction extends CommonAction
 	function index()
 	{	
 		import('ORG.Util.Page');
-		$count = D('content')->count();
+		$title = I("title");
+		$count = D('content')->where('title like "%'.$title.'%"')->count();
 		$p = new Page($count ,10);
 		$limit = "$p->firstRow,$p->listRows";
-		$this->content = D('BlogRelation')->getBlog(0,$limit);
+		$this->content = D('BlogRelation')->where('title like "%'.$title.'%"')->getBlog(0,$limit);
 		$this->page = $p->show();
 		$this->display();
 	}
@@ -106,7 +107,7 @@ class BlogAction extends CommonAction
 	public function del_blog(){
 		$id = I('id');
 		if (D('content')->delete($id)) {
-			D('attr_content')->where(array('cid'=>$data['id']))->delete();
+			D('attr_content')->where(array('cid'=>$id))->delete();
 			$this->success('删除成功',U(GROUP_NAME .'/Blog/trach'));
 		}else{
 			$this->error('删除失败');

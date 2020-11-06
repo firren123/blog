@@ -7,6 +7,14 @@
 </head>
 <body>
 	<table class="table">
+        <tr>
+            <td colspan="7">
+                <form action="" method="get">
+                    标题搜索: <input type="text" name="title">
+                    <input type="submit" value="搜索">
+                </form>
+            </td>
+        </tr>
 		<tr>
 			<th>ID</th>
 			<th>标题</th>
@@ -30,7 +38,7 @@
 				<td>{$v.status}</td>
 				<td>
 					<if condition="ACTION_NAME 	eq 'index'">
-					[<a href="{:U(GROUP_NAME .'/Blog/edit_blog',array('id'=>$v['id']))}">修改</a>]
+					[<a href="{:U(GROUP_NAME .'/Blog/edit_blog')}?id={$v['id']}">修改</a>]
 					[<a href="{:U(GROUP_NAME .'/Blog/toTrach',array('id'=>$v['id'],'del'=>1))}">删除</a>]
 					<else/>
 					[<a href="{:U(GROUP_NAME .'/Blog/toTrach',array('id'=>$v['id']))}">还原</a>]

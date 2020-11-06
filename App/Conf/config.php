@@ -30,11 +30,13 @@ return array(
     //URL重写规则
     'URL_ROUTER_ON' =>true,
 	'URL_ROUTE_RULES' => array( //定义路由规则
-		'c/:id'=>'Home/List/index',
+//		'c/:id'=>'Home/List/index',
 		'/^c_(\d+)$/'=>'Home/List/index?id=:1',
 		':id\d'=>'Home/Detail/index',
-        '/Admin/Category/cate_edit/id/:d/pid/:d$/'=>array('/Admin/Category/cate_edit','id=:1&pid=:2'),
+		'/^Admin\/Blog\/index\/p\/(\d+)$/'=>'Admin/Blog/index?p=:1',
+        '/^Admin\/Blog\/toTrach\/id\/(\d+)\/del\/(\d+)$/'=>'Admin/Blog/toTrach?id=:1&del=:2',
 
+///Blog/toTrach/id/118/del/1.html
 		),
 	// 'URL_ROUTER_ON'   => true, //开启路由
  //    'URL_ROUTE_RULES' => array( //定义路由规则

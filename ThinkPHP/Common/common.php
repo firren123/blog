@@ -137,7 +137,6 @@ function I($name,$default='',$filter=null) {
             }
         }
     }else{ // 变量默认值
-        echo json_encode($input);exit;
         $data       =	 isset($default)?$default:NULL;
 //        $data = $input;
     }
