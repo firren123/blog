@@ -35,6 +35,8 @@ return array(
 		':id\d'=>'Home/Detail/index',
 		'/^Admin\/Blog\/index\/p\/(\d+)$/'=>'Admin/Blog/index?p=:1',
         '/^Admin\/Blog\/toTrach\/id\/(\d+)\/del\/(\d+)$/'=>'Admin/Blog/toTrach?id=:1&del=:2',
+///List/index/id/30/p/2.html
+        '/^List\/index\/id\/(\d+)\/p\/(\d+)$/'=>'List/index?id=:1&p=:2',
 
 ///Blog/toTrach/id/118/del/1.html
 		),
