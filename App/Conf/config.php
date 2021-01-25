@@ -35,12 +35,12 @@ return array(
 		':id\d'=>'Home/Detail/index',
 		'/^Admin\/Blog\/index\/p\/(\d+)$/'=>'Admin/Blog/index?p=:1',
         '/^Admin\/Blog\/toTrach\/id\/(\d+)\/del\/(\d+)$/'=>'Admin/Blog/toTrach?id=:1&del=:2',
-///List/index/id/30/p/2.html
+        '/^Admin\/Link\/del_link\/id\/(\d+)\/del\/(\d+)$/'=>'Admin/Link/del_link?id=:1&del=:2',
+        '/^Admin\/Message\/index\/p\/(\d+)$/'=>'Admin/Message/index?p=:1',
         '/^List\/index\/id\/(\d+)\/p\/(\d+)$/'=>'List/index?id=:1&p=:2',
-
-///Blog/toTrach/id/118/del/1.html
+        '/^Admin\/Category\/addcate\/id\/(\d+)\/pid\/(\d+)$/'=>'Admin/Category/addcate.html?id=:1&pid=:2',
+		//http://www.lichenjun.cn/Admin/Category/addcate.html?id=2&pid=0
 		),
-	// 'URL_ROUTER_ON'   => true, //开启路由
  //    'URL_ROUTE_RULES' => array( //定义路由规则
  //        'news/:year/:month/:day' => array('News/archive', 'status=1'),
  //        'news/:id'               => 'News/read',

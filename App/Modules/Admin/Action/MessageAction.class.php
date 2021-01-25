@@ -11,7 +11,7 @@ class MessageAction extends CommonAction
 		$count = D('evaluate')->count();
 		$p = new Page($count,10);
 		$limit = $p->firstRow.','.$p->listRows;
-		$this->list = D('evaluate')->order('id')->limit($limit)->select();
+		$this->list = D('evaluate')->order('id desc')->limit($limit)->select();
 		$this->page = $p->show();
 		$this->display();
 	}

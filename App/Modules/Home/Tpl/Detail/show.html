@@ -31,10 +31,12 @@
 
 				{$blog.content}
 			</div>
-			{:W('Next',array('title'=>'上一篇文章','where'=>$blog['id'],'order'=>'id desc','en'=>'lt'))}
-			{:W('Next',array('title'=>'下一篇文章','where'=>$blog['id'],'order'=>'id','en'=>'gt'))}
 
 		</div>
+		{:W('Next',array('title'=>'上一篇文章','where'=>$blog['id'],'order'=>'id desc','en'=>'lt'))}
+		<br>
+		{:W('Next',array('title'=>'下一篇文章','where'=>$blog['id'],'order'=>'id','en'=>'gt'))}
+
 		<input type="hidden" name="target_uid" id='target_uid' value="{$blog.id}">
 		{:W('Evaluate')}
 	</div>
